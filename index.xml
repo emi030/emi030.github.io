@@ -81,6 +81,73 @@
   <media:content url="https://your-website-url.example.com/posts/diabetes-analysis/glucose_distribution.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
+  <title>PCOS Risk Factor Analysis</title>
+  <dc:creator>Emi Rivera</dc:creator>
+  <link>https://your-website-url.example.com/posts/pcos-analysis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In this project, I analyzed a clinical PCOS dataset containing 541 patients to identify key risk factors and built a machine learning model to predict PCOS diagnosis with 86% accuracy.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<ul>
+<li>541 patients, 45 features</li>
+<li>32.72% of patients diagnosed with PCOS</li>
+<li>Features include hormone levels, symptoms, BMI, and ultrasound measurements</li>
+</ul>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li><strong>Weight gain</strong> is 3x more common in PCOS patients (68% vs 23%)</li>
+<li><strong>Hair growth and skin darkening</strong> are 4x more prevalent in PCOS patients</li>
+<li><strong>AMH levels</strong> are significantly elevated in PCOS patients — a key clinical marker</li>
+</ul>
+</section>
+<section id="visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/pcos-analysis/symptoms_comparison.png" class="img-fluid figure-img"></p>
+<figcaption>Symptom Comparison</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/pcos-analysis/hormone_analysis_clean.png" class="img-fluid figure-img"></p>
+<figcaption>Hormone Analysis</figcaption>
+</figure>
+</div>
+</section>
+<section id="machine-learning-model" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-model">Machine Learning Model</h2>
+<p>Using Logistic Regression with BMI, hormone levels, follicle count, and symptoms as features, the model achieved <strong>86.11% accuracy</strong> in predicting PCOS diagnosis.</p>
+</section>
+<section id="tools-used" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<ul>
+<li>Python, pandas, matplotlib, seaborn, scikit-learn</li>
+</ul>
+<p><a href="https://github.com/emi030/pcos-analysis">View full code on GitHub</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>Machine Learning</category>
+  <category>Women&#39;s Health</category>
+  <guid>https://your-website-url.example.com/posts/pcos-analysis/</guid>
+  <pubDate>Wed, 11 Mar 2026 04:00:00 GMT</pubDate>
+  <media:content url="https://your-website-url.example.com/posts/pcos-analysis/symptoms_comparison.png" medium="image" type="image/png" height="86" width="144"/>
+</item>
+<item>
   <title>Coding Assignment 2</title>
   <dc:creator>Emi Rivera</dc:creator>
   <link>https://your-website-url.example.com/posts/assignment 2/</link>

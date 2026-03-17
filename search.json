@@ -77,6 +77,55 @@
     "text": "Problem 6: Plot\nFor Problem 6, I made a line plot using the yearly summary table. It shows the mean, min, and max temperature over time."
   },
   {
+    "objectID": "posts/pcos-analysis/index.html",
+    "href": "posts/pcos-analysis/index.html",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "",
+    "text": "In this project, I analyzed a clinical PCOS dataset containing 541 patients to identify key risk factors and built a machine learning model to predict PCOS diagnosis with 86% accuracy."
+  },
+  {
+    "objectID": "posts/pcos-analysis/index.html#overview",
+    "href": "posts/pcos-analysis/index.html#overview",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "",
+    "text": "In this project, I analyzed a clinical PCOS dataset containing 541 patients to identify key risk factors and built a machine learning model to predict PCOS diagnosis with 86% accuracy."
+  },
+  {
+    "objectID": "posts/pcos-analysis/index.html#dataset",
+    "href": "posts/pcos-analysis/index.html#dataset",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "Dataset",
+    "text": "Dataset\n\n541 patients, 45 features\n32.72% of patients diagnosed with PCOS\nFeatures include hormone levels, symptoms, BMI, and ultrasound measurements"
+  },
+  {
+    "objectID": "posts/pcos-analysis/index.html#key-findings",
+    "href": "posts/pcos-analysis/index.html#key-findings",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nWeight gain is 3x more common in PCOS patients (68% vs 23%)\nHair growth and skin darkening are 4x more prevalent in PCOS patients\nAMH levels are significantly elevated in PCOS patients — a key clinical marker"
+  },
+  {
+    "objectID": "posts/pcos-analysis/index.html#visualizations",
+    "href": "posts/pcos-analysis/index.html#visualizations",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "Visualizations",
+    "text": "Visualizations\n\n\n\nSymptom Comparison\n\n\n\n\n\nHormone Analysis"
+  },
+  {
+    "objectID": "posts/pcos-analysis/index.html#machine-learning-model",
+    "href": "posts/pcos-analysis/index.html#machine-learning-model",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "Machine Learning Model",
+    "text": "Machine Learning Model\nUsing Logistic Regression with BMI, hormone levels, follicle count, and symptoms as features, the model achieved 86.11% accuracy in predicting PCOS diagnosis."
+  },
+  {
+    "objectID": "posts/pcos-analysis/index.html#tools-used",
+    "href": "posts/pcos-analysis/index.html#tools-used",
+    "title": "PCOS Risk Factor Analysis",
+    "section": "Tools Used",
+    "text": "Tools Used\n\nPython, pandas, matplotlib, seaborn, scikit-learn\n\nView full code on GitHub"
+  },
+  {
     "objectID": "posts/assignment1/index.html",
     "href": "posts/assignment1/index.html",
     "title": "Coding Assignment 1",
@@ -193,6 +242,6 @@
     "href": "index.html",
     "title": "DATS 1001",
     "section": "",
-    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nEmi Rivera\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nPCOS Risk Factor Analysis\n\n\n\n\n\n\n\n\nMar 11, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nEmi Rivera\n\n\n\n\n\nNo matching items"
   }
 ]
