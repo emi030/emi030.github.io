@@ -81,56 +81,63 @@
     "href": "posts/assignment1/index.html",
     "title": "Coding Assignment 1",
     "section": "",
-    "text": "Photography is something I like to do during my free time. I like taking photos of food, people, pets and everyday moments.\n\n\nI enjoy photography because it lets me be creative and expressive.\n\n\n\n\nFood\nNature and landcapes\nPeople\nMy dog and cat\n\n\n\n\n\nSony A7 IV\nFujifilm X-M5\nCanon EOS R8\nCanon Ae-1\n\n\n\n\nI learned how to do this from: Quarto\n\n\n\n\n\n\nPhoto of my cat\n\n\n\n\n\nWe can use mean() to calculate averages.\n\n\n\nage &lt;- c(17, 19, 20, 25, 30) mean(age)"
+    "text": "In this first assignment, I learned the basics of Quarto markdown, including text formatting, lists, images, and embedded R code. I used my passion for photography as the topic to practice these skills.\nKey tasks:\n\nFormatted text using markdown (bold, italic, headers)\nCreated ordered and unordered lists\nEmbedded images and links\nWrote and ran basic R code\n\nTools: R, Quarto"
+  },
+  {
+    "objectID": "posts/assignment1/index.html#overview",
+    "href": "posts/assignment1/index.html#overview",
+    "title": "Coding Assignment 1",
+    "section": "",
+    "text": "In this first assignment, I learned the basics of Quarto markdown, including text formatting, lists, images, and embedded R code. I used my passion for photography as the topic to practice these skills.\nKey tasks:\n\nFormatted text using markdown (bold, italic, headers)\nCreated ordered and unordered lists\nEmbedded images and links\nWrote and ran basic R code\n\nTools: R, Quarto"
   },
   {
     "objectID": "posts/assignment1/index.html#why-i-like-photography",
     "href": "posts/assignment1/index.html#why-i-like-photography",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "I enjoy photography because it lets me be creative and expressive."
+    "section": "Why I like Photography",
+    "text": "Why I like Photography\nI enjoy photography because it lets me be creative and expressive."
   },
   {
     "objectID": "posts/assignment1/index.html#things-i-like-to-photograph",
     "href": "posts/assignment1/index.html#things-i-like-to-photograph",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "Food\nNature and landcapes\nPeople\nMy dog and cat"
+    "section": "Things I like to Photograph",
+    "text": "Things I like to Photograph\n\nFood\nNature and landcapes\nPeople\nMy dog and cat"
   },
   {
     "objectID": "posts/assignment1/index.html#my-cameras",
     "href": "posts/assignment1/index.html#my-cameras",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "Sony A7 IV\nFujifilm X-M5\nCanon EOS R8\nCanon Ae-1"
+    "section": "My Cameras",
+    "text": "My Cameras\n\nSony A7 IV\nFujifilm X-M5\nCanon EOS R8\nCanon Ae-1"
   },
   {
     "objectID": "posts/assignment1/index.html#helpful-resource",
     "href": "posts/assignment1/index.html#helpful-resource",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "I learned how to do this from: Quarto"
+    "section": "Helpful Resource",
+    "text": "Helpful Resource\nI learned how to do this from: Quarto"
   },
   {
     "objectID": "posts/assignment1/index.html#a-sample-image",
     "href": "posts/assignment1/index.html#a-sample-image",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "Photo of my cat"
+    "section": "A Sample Image",
+    "text": "A Sample Image\n\n\n\nPhoto of my cat"
   },
   {
     "objectID": "posts/assignment1/index.html#inline-code-example",
     "href": "posts/assignment1/index.html#inline-code-example",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "We can use mean() to calculate averages."
+    "section": "Inline Code Example",
+    "text": "Inline Code Example\nWe can use mean() to calculate averages."
   },
   {
     "objectID": "posts/assignment1/index.html#r-code-example",
     "href": "posts/assignment1/index.html#r-code-example",
     "title": "Coding Assignment 1",
-    "section": "",
-    "text": "age &lt;- c(17, 19, 20, 25, 30) mean(age)"
+    "section": "R Code Example",
+    "text": "R Code Example\nage &lt;- c(17, 19, 20, 25, 30) mean(age)"
   },
   {
     "objectID": "posts/diabetes-analysis/index.html",
@@ -186,6 +193,6 @@
     "href": "index.html",
     "title": "DATS 1001",
     "section": "",
-    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nEmi Rivera\n\n\n\n\n\nNo matching items"
   }
 ]
