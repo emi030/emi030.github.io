@@ -82,6 +82,7 @@
 </item>
 <item>
   <title>Coding Assignment 2</title>
+  <dc:creator>Emi Rivera</dc:creator>
   <link>https://your-website-url.example.com/posts/assignment 2/</link>
   <description><![CDATA[ 
 
@@ -89,6 +90,20 @@
 
 
 
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In this assignment, I analyzed a large NOAA climate dataset containing over 17 million temperature measurements from weather stations around the world. Using R and the tidyverse, I cleaned the data, filtered by country and time period, and visualized global temperature trends over time.</p>
+<p><strong>Key tasks:</strong></p>
+<ul>
+<li>Imported and cleaned NOAA temperature data (17.9M rows)</li>
+<li>Filtered data for Japan and Algeria (2000–2025)</li>
+<li>Summarized temperature statistics by year and country</li>
+<li>Visualized mean, min, and max temperature trends over time</li>
+</ul>
+</section>
+<section id="tools-r-tidyverse-ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="tools-r-tidyverse-ggplot2"><strong>Tools:</strong> R, tidyverse, ggplot2</h2>
+</section>
 <section id="problem-1-import-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1-import-the-data">Problem 1: Import the data</h2>
 <p>First, I loaded the three required CSV files into RStudio. I saved them as <code>temperatures</code>, <code>stations</code>, and <code>countries</code>.</p>
@@ -248,6 +263,9 @@ $ Name        &lt;chr&gt; "Afghanistan", "Akrotiri", "Albania", "Algeria", "Amer
 </section>
 
  ]]></description>
+  <category>R</category>
+  <category>Data Wrangling</category>
+  <category>Climate Data</category>
   <guid>https://your-website-url.example.com/posts/assignment 2/</guid>
   <pubDate>Sun, 01 Mar 2026 05:00:00 GMT</pubDate>
 </item>

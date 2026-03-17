@@ -11,14 +11,28 @@
     "href": "posts/assignment 2/index.html",
     "title": "Coding Assignment 2",
     "section": "",
-    "text": "First, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
+    "text": "In this assignment, I analyzed a large NOAA climate dataset containing over 17 million temperature measurements from weather stations around the world. Using R and the tidyverse, I cleaned the data, filtered by country and time period, and visualized global temperature trends over time.\nKey tasks:\n\nImported and cleaned NOAA temperature data (17.9M rows)\nFiltered data for Japan and Algeria (2000–2025)\nSummarized temperature statistics by year and country\nVisualized mean, min, and max temperature trends over time"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#overview",
+    "href": "posts/assignment 2/index.html#overview",
+    "title": "Coding Assignment 2",
+    "section": "",
+    "text": "In this assignment, I analyzed a large NOAA climate dataset containing over 17 million temperature measurements from weather stations around the world. Using R and the tidyverse, I cleaned the data, filtered by country and time period, and visualized global temperature trends over time.\nKey tasks:\n\nImported and cleaned NOAA temperature data (17.9M rows)\nFiltered data for Japan and Algeria (2000–2025)\nSummarized temperature statistics by year and country\nVisualized mean, min, and max temperature trends over time"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#tools-r-tidyverse-ggplot2",
+    "href": "posts/assignment 2/index.html#tools-r-tidyverse-ggplot2",
+    "title": "Coding Assignment 2",
+    "section": "Tools: R, tidyverse, ggplot2",
+    "text": "Tools: R, tidyverse, ggplot2"
   },
   {
     "objectID": "posts/assignment 2/index.html#problem-1-import-the-data",
     "href": "posts/assignment 2/index.html#problem-1-import-the-data",
     "title": "Coding Assignment 2",
-    "section": "",
-    "text": "First, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
+    "section": "Problem 1: Import the data",
+    "text": "Problem 1: Import the data\nFirst, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
   },
   {
     "objectID": "posts/assignment 2/index.html#problem-2-clean-the-data",
@@ -172,6 +186,6 @@
     "href": "index.html",
     "title": "DATS 1001",
     "section": "",
-    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\n\n\n\nNo matching items"
   }
 ]
