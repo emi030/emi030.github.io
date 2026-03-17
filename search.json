@@ -1,17 +1,66 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DATS 1001",
-    "section": "",
-    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Emi Rivera",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html",
+    "href": "posts/assignment 2/index.html",
+    "title": "Coding Assignment 2",
+    "section": "",
+    "text": "First, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-1-import-the-data",
+    "href": "posts/assignment 2/index.html#problem-1-import-the-data",
+    "title": "Coding Assignment 2",
+    "section": "",
+    "text": "First, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-2-clean-the-data",
+    "href": "posts/assignment 2/index.html#problem-2-clean-the-data",
+    "title": "Coding Assignment 2",
+    "section": "Problem 2: Clean the data",
+    "text": "Problem 2: Clean the data\nFor problem 2, I cleaned the data as required. In the temperature file, I removed those rows that are -9999. AvgTemp is stored as “hundredths of a degree”, so I divided by 100 to get real °C. Also, I created a country code column from the first two letters of the station ID. Then I removed duplicate country codes so each code only shows once.\n\n\n[1] 272\n\n\n# A tibble: 0 × 2\n# ℹ 2 variables: FIPS 10-4 &lt;chr&gt;, n &lt;int&gt;"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-3-set-parameters",
+    "href": "posts/assignment 2/index.html#problem-3-set-parameters",
+    "title": "Coding Assignment 2",
+    "section": "Problem 3: Set parameters",
+    "text": "Problem 3: Set parameters\nFor problem 3, I set my own parameters country, year begin, year end and month. This makes it easy to change the query without rewriting the whole code.\n\n\n# A tibble: 1 × 5\n  data_file     country year_begin year_end month\n  &lt;chr&gt;         &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;\n1 my_output.csv Japan         2000     2025     1"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-4-join-filter-japan",
+    "href": "posts/assignment 2/index.html#problem-4-join-filter-japan",
+    "title": "Coding Assignment 2",
+    "section": "Problem 4: Join + Filter (Japan)",
+    "text": "Problem 4: Join + Filter (Japan)\nFor Problem 4, I joined the datasets and then filtered the data using my parameters. I selected the required columns, sorted by station NAME, and showed the first 7 and last 7 rows. Finally, I saved the result as a CSV file.\n\n\n# A tibble: 7 × 7\n  NAME     LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ABASHIRI     44.0      144. Japan    2000     1   -4.8 \n2 ABASHIRI     44.0      144. Japan    2001     1   -7.57\n3 ABASHIRI     44.0      144. Japan    2002     1   -4.4 \n4 ABASHIRI     44.0      144. Japan    2003     1   -6.1 \n5 ABASHIRI     44.0      144. Japan    2004     1   -4.1 \n6 ABASHIRI     44.0      144. Japan    2005     1   -5.68\n7 ABASHIRI     44.0      144. Japan    2006     1   -6   \n\n\n# A tibble: 7 × 7\n  NAME  LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 YORON     27.0      128. Japan    2019     1    17.8\n2 YORON     27.0      128. Japan    2020     1    18.2\n3 YORON     27.0      128. Japan    2021     1    16.6\n4 YORON     27.0      128. Japan    2022     1    17.3\n5 YORON     27.0      128. Japan    2023     1    17.2\n6 YORON     27.0      128. Japan    2024     1    17.7\n7 YORON     27.0      128. Japan    2025     1    16.3"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-4-repeat-join-filter-algeria",
+    "href": "posts/assignment 2/index.html#problem-4-repeat-join-filter-algeria",
+    "title": "Coding Assignment 2",
+    "section": "Problem 4 (Repeat): Join + Filter (Algeria)",
+    "text": "Problem 4 (Repeat): Join + Filter (Algeria)\nThen I repeated the same steps for Algeria (2000–2025, June) and saved it to a different CSV file.\n\n\n# A tibble: 7 × 7\n  NAME  LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ADRAR     27.9     -0.28 Algeria  2000     6    34.3\n2 ADRAR     27.9     -0.28 Algeria  2001     6    35.6\n3 ADRAR     27.9     -0.28 Algeria  2003     6    35.3\n4 ADRAR     27.9     -0.28 Algeria  2004     6    33.8\n5 ADRAR     27.9     -0.28 Algeria  2005     6    34.4\n6 ADRAR     27.9     -0.28 Algeria  2006     6    35.1\n7 ADRAR     27.9     -0.28 Algeria  2007     6    34.1\n\n\n# A tibble: 7 × 7\n  NAME   LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ZENATA     35.0     -1.45 Algeria  2019     6    22.1\n2 ZENATA     35.0     -1.45 Algeria  2020     6    23.2\n3 ZENATA     35.0     -1.45 Algeria  2021     6    23.0\n4 ZENATA     35.0     -1.45 Algeria  2022     6    24.6\n5 ZENATA     35.0     -1.45 Algeria  2023     6    24.4\n6 ZENATA     35.0     -1.45 Algeria  2024     6    22.9\n7 ZENATA     35.0     -1.45 Algeria  2025     6    26.7"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-5-summaries",
+    "href": "posts/assignment 2/index.html#problem-5-summaries",
+    "title": "Coding Assignment 2",
+    "section": "Problem 5: Summaries",
+    "text": "Problem 5: Summaries\nFor Problem 5, I summarized the joined data. I made three tables: summary_year, coverage_year, and coverage_country. Then I reported the number of measurements in 2025 and the top 5 countries overall.\n\n\n# A tibble: 1 × 2\n   Year n_measurements\n  &lt;dbl&gt;          &lt;int&gt;\n1  2025         126155\n\n\n# A tibble: 5 × 2\n  Name          n_measurements\n  &lt;chr&gt;                  &lt;int&gt;\n1 United States        7810379\n2 Canada               1540423\n3 Russia                788220\n4 Australia             760851\n5 Germany               518642\n\n\n# A tibble: 1 × 2\n  min_year max_year\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     1701     2026"
+  },
+  {
+    "objectID": "posts/assignment 2/index.html#problem-6-plot",
+    "href": "posts/assignment 2/index.html#problem-6-plot",
+    "title": "Coding Assignment 2",
+    "section": "Problem 6: Plot",
+    "text": "Problem 6: Plot\nFor Problem 6, I made a line plot using the yearly summary table. It shows the mean, min, and max temperature over time."
   },
   {
     "objectID": "posts/assignment1/index.html",
@@ -70,80 +119,59 @@
     "text": "age &lt;- c(17, 19, 20, 25, 30) mean(age)"
   },
   {
-    "objectID": "posts/assignment 2/index.html",
-    "href": "posts/assignment 2/index.html",
-    "title": "Coding Assignment 2",
+    "objectID": "posts/diabetes-analysis/index.html",
+    "href": "posts/diabetes-analysis/index.html",
+    "title": "Diabetes Prediction Analysis",
     "section": "",
-    "text": "First, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
+    "text": "In this project, I analyzed the Pima Indians Diabetes Dataset to explore risk factors associated with diabetes and built a machine learning model to predict diabetes outcomes."
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-1-import-the-data",
-    "href": "posts/assignment 2/index.html#problem-1-import-the-data",
-    "title": "Coding Assignment 2",
+    "objectID": "posts/diabetes-analysis/index.html#overview",
+    "href": "posts/diabetes-analysis/index.html#overview",
+    "title": "Diabetes Prediction Analysis",
     "section": "",
-    "text": "First, I loaded the three required CSV files into RStudio. I saved them as temperatures, stations, and countries.\n\n\nRows: 17,911,764\nColumns: 4\n$ ID      &lt;chr&gt; \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"ACW00011604\", \"A…\n$ Year    &lt;dbl&gt; 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 1961, 19…\n$ Month   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8,…\n$ AvgTemp &lt;dbl&gt; -142, 183, 419, 720, 1075, 1546, 1517, 1428, 1360, 1121, 457, …\n\n\nRows: 27,585\nColumns: 5\n$ ID        &lt;chr&gt; \"ACW00011604\", \"AE000041196\", \"AEM00041184\", \"AEM00041194\", …\n$ LATITUDE  &lt;dbl&gt; 57.7667, 25.3330, 25.6170, 25.2550, 24.4300, 24.4330, 24.262…\n$ LONGITUDE &lt;dbl&gt; 11.8667, 55.5170, 55.9330, 55.3640, 54.4700, 54.6510, 55.609…\n$ STNELEV   &lt;dbl&gt; 18.0, 34.0, 31.0, 10.4, 3.0, 26.8, 264.9, 3366.0, 378.0, 977…\n$ NAME      &lt;chr&gt; \"SAVE\", \"SHARJAH_INTER_AIRP\", \"RAS_AL_KHAIMAH_INTE\", \"DUBAI_…\n\n\nRows: 279\nColumns: 2\n$ `FIPS 10-4` &lt;chr&gt; \"AF\", \"AX\", \"AL\", \"AG\", \"AQ\", \"AN\", \"AO\", \"AV\", \"AY\", \"AC\"…\n$ Name        &lt;chr&gt; \"Afghanistan\", \"Akrotiri\", \"Albania\", \"Algeria\", \"American…"
+    "text": "In this project, I analyzed the Pima Indians Diabetes Dataset to explore risk factors associated with diabetes and built a machine learning model to predict diabetes outcomes."
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-2-clean-the-data",
-    "href": "posts/assignment 2/index.html#problem-2-clean-the-data",
-    "title": "Coding Assignment 2",
-    "section": "Problem 2: Clean the data",
-    "text": "Problem 2: Clean the data\nFor problem 2, I cleaned the data as required. In the temperature file, I removed those rows that are -9999. AvgTemp is stored as “hundredths of a degree”, so I divided by 100 to get real °C. Also, I created a country code column from the first two letters of the station ID. Then I removed duplicate country codes so each code only shows once.\n\n\n[1] 272\n\n\n# A tibble: 0 × 2\n# ℹ 2 variables: FIPS 10-4 &lt;chr&gt;, n &lt;int&gt;"
+    "objectID": "posts/diabetes-analysis/index.html#dataset",
+    "href": "posts/diabetes-analysis/index.html#dataset",
+    "title": "Diabetes Prediction Analysis",
+    "section": "Dataset",
+    "text": "Dataset\nThe dataset contains 768 patients with 9 features including glucose levels, BMI, age, and blood pressure."
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-3-set-parameters",
-    "href": "posts/assignment 2/index.html#problem-3-set-parameters",
-    "title": "Coding Assignment 2",
-    "section": "Problem 3: Set parameters",
-    "text": "Problem 3: Set parameters\nFor problem 3, I set my own parameters country, year begin, year end and month. This makes it easy to change the query without rewriting the whole code.\n\n\n# A tibble: 1 × 5\n  data_file     country year_begin year_end month\n  &lt;chr&gt;         &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;\n1 my_output.csv Japan         2000     2025     1"
+    "objectID": "posts/diabetes-analysis/index.html#key-findings",
+    "href": "posts/diabetes-analysis/index.html#key-findings",
+    "title": "Diabetes Prediction Analysis",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nGlucose is the strongest predictor of diabetes (correlation: 0.47)\nDiabetic patients have significantly higher BMI (median ~35 vs ~30)\nDiabetic patients tend to be older (median age ~36 vs ~27)"
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-4-join-filter-japan",
-    "href": "posts/assignment 2/index.html#problem-4-join-filter-japan",
-    "title": "Coding Assignment 2",
-    "section": "Problem 4: Join + Filter (Japan)",
-    "text": "Problem 4: Join + Filter (Japan)\nFor Problem 4, I joined the datasets and then filtered the data using my parameters. I selected the required columns, sorted by station NAME, and showed the first 7 and last 7 rows. Finally, I saved the result as a CSV file.\n\n\n# A tibble: 7 × 7\n  NAME     LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ABASHIRI     44.0      144. Japan    2000     1   -4.8 \n2 ABASHIRI     44.0      144. Japan    2001     1   -7.57\n3 ABASHIRI     44.0      144. Japan    2002     1   -4.4 \n4 ABASHIRI     44.0      144. Japan    2003     1   -6.1 \n5 ABASHIRI     44.0      144. Japan    2004     1   -4.1 \n6 ABASHIRI     44.0      144. Japan    2005     1   -5.68\n7 ABASHIRI     44.0      144. Japan    2006     1   -6   \n\n\n# A tibble: 7 × 7\n  NAME  LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 YORON     27.0      128. Japan    2019     1    17.8\n2 YORON     27.0      128. Japan    2020     1    18.2\n3 YORON     27.0      128. Japan    2021     1    16.6\n4 YORON     27.0      128. Japan    2022     1    17.3\n5 YORON     27.0      128. Japan    2023     1    17.2\n6 YORON     27.0      128. Japan    2024     1    17.7\n7 YORON     27.0      128. Japan    2025     1    16.3"
+    "objectID": "posts/diabetes-analysis/index.html#visualizations",
+    "href": "posts/diabetes-analysis/index.html#visualizations",
+    "title": "Diabetes Prediction Analysis",
+    "section": "Visualizations",
+    "text": "Visualizations\n\n\n\nGlucose Distribution\n\n\n\n\n\nBMI and Age Analysis\n\n\n\n\n\nCorrelation Heatmap"
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-5-another-filter-algeria",
-    "href": "posts/assignment 2/index.html#problem-5-another-filter-algeria",
-    "title": "Assignment 2",
-    "section": "Problem 5: Another filter (Algeria)",
-    "text": "Problem 5: Another filter (Algeria)\n\ndata_file2  &lt;- \"algeria_june_2000_2025.csv\"\ncountry2    &lt;- \"Algeria\"\nyear_begin2 &lt;- 2000\nyear_end2   &lt;- 2025\nmonth2      &lt;- 6\n\nresult2 &lt;- all_data_export |&gt;\n  filter(\n    Name == country2,\n    Year &gt;= year_begin2,\n    Year &lt;= year_end2,\n    Month == month2\n  ) |&gt;\n  select(\n    NAME, LATITUDE, LONGITUDE,\n    Country = Name,\n    Year, Month, AvgTemp\n  ) |&gt;\n  arrange(NAME)\n\nhead(result2, 7)\n\n# A tibble: 7 × 7\n  NAME  LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ADRAR     27.9     -0.28 Algeria  2000     6    34.3\n2 ADRAR     27.9     -0.28 Algeria  2001     6    35.6\n3 ADRAR     27.9     -0.28 Algeria  2003     6    35.3\n4 ADRAR     27.9     -0.28 Algeria  2004     6    33.8\n5 ADRAR     27.9     -0.28 Algeria  2005     6    34.4\n6 ADRAR     27.9     -0.28 Algeria  2006     6    35.1\n7 ADRAR     27.9     -0.28 Algeria  2007     6    34.1\n\ntail(result2, 7)\n\n# A tibble: 7 × 7\n  NAME   LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ZENATA     35.0     -1.45 Algeria  2019     6    22.1\n2 ZENATA     35.0     -1.45 Algeria  2020     6    23.2\n3 ZENATA     35.0     -1.45 Algeria  2021     6    23.0\n4 ZENATA     35.0     -1.45 Algeria  2022     6    24.6\n5 ZENATA     35.0     -1.45 Algeria  2023     6    24.4\n6 ZENATA     35.0     -1.45 Algeria  2024     6    22.9\n7 ZENATA     35.0     -1.45 Algeria  2025     6    26.7\n\nwrite_csv(result2, data_file2)"
+    "objectID": "posts/diabetes-analysis/index.html#machine-learning-model",
+    "href": "posts/diabetes-analysis/index.html#machine-learning-model",
+    "title": "Diabetes Prediction Analysis",
+    "section": "Machine Learning Model",
+    "text": "Machine Learning Model\nUsing Logistic Regression with an 80/20 train/test split, the model achieved 74.68% accuracy in predicting diabetes outcomes."
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-6-summaries-year-coverage",
-    "href": "posts/assignment 2/index.html#problem-6-summaries-year-coverage",
-    "title": "Assignment 2",
-    "section": "Problem 6: Summaries (Year + Coverage)",
-    "text": "Problem 6: Summaries (Year + Coverage)\n\nall_data_summary &lt;- temperatures_clean |&gt;\n  left_join(countries_clean, by = \"FIPS 10-4\")\n\nsummary_year &lt;- all_data_summary |&gt;\n  group_by(Year) |&gt;\n  summarize(\n    mean_temp = mean(AvgTemp, na.rm = TRUE),\n    min_temp  = min(AvgTemp,  na.rm = TRUE),\n    max_temp  = max(AvgTemp,  na.rm = TRUE),\n    .groups = \"drop\"\n  ) |&gt;\n  arrange(Year)\n\ncoverage_year &lt;- all_data_summary |&gt;\n  group_by(Year) |&gt;\n  summarize(\n    n_measurements = n(),\n    .groups = \"drop\"\n  ) |&gt;\n  arrange(Year)\n\ncoverage_country &lt;- all_data_summary |&gt;\n  group_by(Name) |&gt;\n  summarize(\n    n_measurements = n(),\n    .groups = \"drop\"\n  ) |&gt;\n  arrange(desc(n_measurements))\n\ncoverage_year |&gt;\n  filter(Year == 2025)\n\n# A tibble: 1 × 2\n   Year n_measurements\n  &lt;dbl&gt;          &lt;int&gt;\n1  2025         126155\n\ncoverage_country |&gt;\n  slice_head(n = 5)\n\n# A tibble: 5 × 2\n  Name          n_measurements\n  &lt;chr&gt;                  &lt;int&gt;\n1 United States        7810379\n2 Canada               1540423\n3 Russia                788220\n4 Australia             760851\n5 Germany               518642"
+    "objectID": "posts/diabetes-analysis/index.html#tools-used",
+    "href": "posts/diabetes-analysis/index.html#tools-used",
+    "title": "Diabetes Prediction Analysis",
+    "section": "Tools Used",
+    "text": "Tools Used\n\nPython, pandas, matplotlib, seaborn, scikit-learn\n\nView full code on GitHub"
   },
   {
-    "objectID": "posts/assignment 2/index.html#problem-7-plot",
-    "href": "posts/assignment 2/index.html#problem-7-plot",
-    "title": "Assignment 2",
-    "section": "Problem 7: Plot",
-    "text": "Problem 7: Plot\n\nsummary_year_long &lt;- summary_year |&gt;\n  pivot_longer(\n    cols = c(mean_temp, min_temp, max_temp),\n    names_to = \"stat\",\n    values_to = \"temp\"\n  )\n\nggplot(summary_year_long, aes(x = Year, y = temp, color = stat)) +\n  geom_line() +\n  labs(\n    title = \"Temperature Summary by Year\",\n    x = \"Year\",\n    y = \"Temperature (°C)\",\n    color = \"Statistic\"\n  )"
-  },
-  {
-    "objectID": "posts/assignment 2/index.html#problem-4-repeat-join-filter-algeria",
-    "href": "posts/assignment 2/index.html#problem-4-repeat-join-filter-algeria",
-    "title": "Coding Assignment 2",
-    "section": "Problem 4 (Repeat): Join + Filter (Algeria)",
-    "text": "Problem 4 (Repeat): Join + Filter (Algeria)\nThen I repeated the same steps for Algeria (2000–2025, June) and saved it to a different CSV file.\n\n\n# A tibble: 7 × 7\n  NAME  LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ADRAR     27.9     -0.28 Algeria  2000     6    34.3\n2 ADRAR     27.9     -0.28 Algeria  2001     6    35.6\n3 ADRAR     27.9     -0.28 Algeria  2003     6    35.3\n4 ADRAR     27.9     -0.28 Algeria  2004     6    33.8\n5 ADRAR     27.9     -0.28 Algeria  2005     6    34.4\n6 ADRAR     27.9     -0.28 Algeria  2006     6    35.1\n7 ADRAR     27.9     -0.28 Algeria  2007     6    34.1\n\n\n# A tibble: 7 × 7\n  NAME   LATITUDE LONGITUDE Country  Year Month AvgTemp\n  &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1 ZENATA     35.0     -1.45 Algeria  2019     6    22.1\n2 ZENATA     35.0     -1.45 Algeria  2020     6    23.2\n3 ZENATA     35.0     -1.45 Algeria  2021     6    23.0\n4 ZENATA     35.0     -1.45 Algeria  2022     6    24.6\n5 ZENATA     35.0     -1.45 Algeria  2023     6    24.4\n6 ZENATA     35.0     -1.45 Algeria  2024     6    22.9\n7 ZENATA     35.0     -1.45 Algeria  2025     6    26.7"
-  },
-  {
-    "objectID": "posts/assignment 2/index.html#problem-5-summaries",
-    "href": "posts/assignment 2/index.html#problem-5-summaries",
-    "title": "Coding Assignment 2",
-    "section": "Problem 5: Summaries",
-    "text": "Problem 5: Summaries\nFor Problem 5, I summarized the joined data. I made three tables: summary_year, coverage_year, and coverage_country. Then I reported the number of measurements in 2025 and the top 5 countries overall.\n\n\n# A tibble: 1 × 2\n   Year n_measurements\n  &lt;dbl&gt;          &lt;int&gt;\n1  2025         126155\n\n\n# A tibble: 5 × 2\n  Name          n_measurements\n  &lt;chr&gt;                  &lt;int&gt;\n1 United States        7810379\n2 Canada               1540423\n3 Russia                788220\n4 Australia             760851\n5 Germany               518642\n\n\n# A tibble: 1 × 2\n  min_year max_year\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     1701     2026"
-  },
-  {
-    "objectID": "posts/assignment 2/index.html#problem-6-plot",
-    "href": "posts/assignment 2/index.html#problem-6-plot",
-    "title": "Coding Assignment 2",
-    "section": "Problem 6: Plot",
-    "text": "Problem 6: Plot\nFor Problem 6, I made a line plot using the yearly summary table. It shows the mean, min, and max temperature over time."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DATS 1001",
+    "section": "",
+    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -10,7 +10,76 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 01 Mar 2026 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 17 Mar 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Diabetes Prediction Analysis</title>
+  <dc:creator>Emi Rivera</dc:creator>
+  <link>https://your-website-url.example.com/posts/diabetes-analysis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In this project, I analyzed the Pima Indians Diabetes Dataset to explore risk factors associated with diabetes and built a machine learning model to predict diabetes outcomes.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The dataset contains 768 patients with 9 features including glucose levels, BMI, age, and blood pressure.</p>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li><strong>Glucose</strong> is the strongest predictor of diabetes (correlation: 0.47)</li>
+<li>Diabetic patients have significantly higher <strong>BMI</strong> (median ~35 vs ~30)</li>
+<li>Diabetic patients tend to be <strong>older</strong> (median age ~36 vs ~27)</li>
+</ul>
+</section>
+<section id="visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/glucose_distribution.png" class="img-fluid figure-img"></p>
+<figcaption>Glucose Distribution</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/bmi_age_analysis.png" class="img-fluid figure-img"></p>
+<figcaption>BMI and Age Analysis</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/correlation_heatmap.png" class="img-fluid figure-img"></p>
+<figcaption>Correlation Heatmap</figcaption>
+</figure>
+</div>
+</section>
+<section id="machine-learning-model" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-model">Machine Learning Model</h2>
+<p>Using Logistic Regression with an 80/20 train/test split, the model achieved <strong>74.68% accuracy</strong> in predicting diabetes outcomes.</p>
+</section>
+<section id="tools-used" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<ul>
+<li>Python, pandas, matplotlib, seaborn, scikit-learn</li>
+</ul>
+<p><a href="https://github.com/emi030/diabetes-project">View full code on GitHub</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>Machine Learning</category>
+  <category>Healthcare</category>
+  <guid>https://your-website-url.example.com/posts/diabetes-analysis/</guid>
+  <pubDate>Tue, 17 Mar 2026 04:00:00 GMT</pubDate>
+  <media:content url="https://your-website-url.example.com/posts/diabetes-analysis/glucose_distribution.png" medium="image" type="image/png" height="108" width="144"/>
+</item>
 <item>
   <title>Coding Assignment 2</title>
   <link>https://your-website-url.example.com/posts/assignment 2/</link>
