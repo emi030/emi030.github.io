@@ -102,7 +102,7 @@
     "href": "posts/pcos-analysis/index.html#key-findings",
     "title": "PCOS Risk Factor Analysis",
     "section": "Key Findings",
-    "text": "Key Findings\n\nWeight gain is 3x more common in PCOS patients (68% vs 23%)\nHair growth and skin darkening are 4x more prevalent in PCOS patients\nAMH levels are significantly elevated in PCOS patients — a key clinical marker"
+    "text": "Key Findings\n\nWeight gain is 3x more common in PCOS patients (68% vs 23%)\nHair growth and skin darkening are 4x more prevalent in PCOS patients\nAMH levels are significantly elevated in PCOS patients is a key clinical marker"
   },
   {
     "objectID": "posts/pcos-analysis/index.html#visualizations",
@@ -123,14 +123,14 @@
     "href": "posts/pcos-analysis/index.html#statistical-analysis",
     "title": "PCOS Risk Factor Analysis",
     "section": "Statistical Analysis",
-    "text": "Statistical Analysis\nTo validate the findings, I conducted t-tests comparing PCOS and non-PCOS groups.\n\n\n\nStatistical Significance\n\n\nKey findings:\n\nAMH (p = 0.0001), BMI (p = 0.0002), and FSH (p = 0.0105) showed statistically significant differences between groups\nAll five symptoms were highly significant (p &lt; 0.0001)\nInterestingly, LH was the only non-significant marker (p = 0.6230), suggesting it may not be a reliable standalone diagnostic indicator — and raising questions about whether LH behaves differently across ethnic populations"
+    "text": "Statistical Analysis\nTo validate the findings, I conducted t-tests comparing PCOS and non-PCOS groups.\n\n\n\nStatistical Significance\n\n\nKey findings:\n\nAMH (p = 0.0001), BMI (p = 0.0002), and FSH (p = 0.0105) showed statistically significant differences between groups\nAll five symptoms were highly significant (p &lt; 0.0001)\nInterestingly, LH was the only non-significant marker (p = 0.6230), suggesting it may not be a reliable standalone diagnostic indicator and raising questions about whether LH behaves differently across ethnic populations"
   },
   {
     "objectID": "posts/pcos-analysis/index.html#limitations-future-directions",
     "href": "posts/pcos-analysis/index.html#limitations-future-directions",
     "title": "PCOS Risk Factor Analysis",
     "section": "Limitations & Future Directions",
-    "text": "Limitations & Future Directions\nThis dataset does not include ethnicity information. Given that East Asian and Latina women present with PCOS differently than European women, future work should examine whether these findings generalize across ethnic groups — particularly in the context of GWAS-based genetic risk profiling."
+    "text": "Limitations & Future Directions\nThis dataset does not include ethnicity information. Given that East Asian and Latina women present with PCOS differently than European women, future work should examine whether these findings generalize across ethnic groups particularly in the context of GWAS-based genetic risk profiling."
   },
   {
     "objectID": "posts/pcos-analysis/index.html#tools-used",
