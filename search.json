@@ -217,6 +217,69 @@
     "text": "R Code Example\nage &lt;- c(17, 19, 20, 25, 30) mean(age)"
   },
   {
+    "objectID": "posts/noshow-analysis/index.html",
+    "href": "posts/noshow-analysis/index.html",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "",
+    "text": "In this project, I analyzed real appointment data from a primary care clinic to identify what drives patient no-shows and built a machine learning model to predict which appointments are at highest risk. This came from a real problem I see working as a Medical Assistant. No-shows waste provider time and are largely preventable with the right outreach."
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#overview",
+    "href": "posts/noshow-analysis/index.html#overview",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "",
+    "text": "In this project, I analyzed real appointment data from a primary care clinic to identify what drives patient no-shows and built a machine learning model to predict which appointments are at highest risk. This came from a real problem I see working as a Medical Assistant. No-shows waste provider time and are largely preventable with the right outreach."
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#dataset",
+    "href": "posts/noshow-analysis/index.html#dataset",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Dataset",
+    "text": "Dataset\n\n48,810 de-identified appointment records (2023–2026)\nSource: EHR export from JinCare Wellness Center (raw data not included)\nOverall no-show rate: 19.11%\nFeatures include insurance type, appointment type, age, sex, confirmation status, and scheduling channel"
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#key-findings",
+    "href": "posts/noshow-analysis/index.html#key-findings",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nConfirmed patients had a 2.91% no-show rate vs 29.63% for patients with no contact — a 10x difference\nUninsured (cash pay) patients had a 77% no-show rate, while Medicare patients were the lowest at around 4–5%\nYounger patients (mean age 45.4) no-showed more than patients who showed up (mean age 49.1, p &lt; 0.0001)\nStaff-scheduled appointments had a 6.8% no-show rate vs 15.3% for patient portal appointments"
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#visualizations",
+    "href": "posts/noshow-analysis/index.html#visualizations",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Visualizations",
+    "text": "Visualizations\n\n\n\nConfirmation Effect\n\n\n\n\n\nInsurance Type\n\n\n\n\n\nAge Distribution\n\n\n\n\n\nScheduling Channel"
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#statistical-analysis",
+    "href": "posts/noshow-analysis/index.html#statistical-analysis",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Statistical Analysis",
+    "text": "Statistical Analysis\nAll predictors except sex were statistically significant (p &lt; 0.05).\nKey findings:\n\nInsurance type (p &lt; 0.0001), appointment type (p &lt; 0.0001), confirmation status (p &lt; 0.0001), and age (p &lt; 0.0001) all showed strong associations with no-show behavior\nSex was the only non-significant predictor (p = 0.35), suggesting no-show behavior is similar between male and female patients"
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#machine-learning-model",
+    "href": "posts/noshow-analysis/index.html#machine-learning-model",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Machine Learning Model",
+    "text": "Machine Learning Model\nUsing patient age, appointment type, confirmation status, insurance type, and scheduling channel as features:\n\n\n\nFeature Importance\n\n\n\nLogistic Regression Accuracy: 60.73%\nRandom Forest Accuracy: 82.38%\nTop predictors: patient age, appointment type, confirmation status, insurance type"
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#clinical-application",
+    "href": "posts/noshow-analysis/index.html#clinical-application",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Clinical Application",
+    "text": "Clinical Application\nBeyond the analysis, I built a daily risk prediction tool that takes the clinic’s EHR schedule, parses each appointment, and outputs a ranked list with high-risk patients flagged in red. The goal is to give the front desk a simple way to prioritize outreach calls each morning."
+  },
+  {
+    "objectID": "posts/noshow-analysis/index.html#tools-used",
+    "href": "posts/noshow-analysis/index.html#tools-used",
+    "title": "Patient No-Show Prediction Analysis",
+    "section": "Tools Used",
+    "text": "Tools Used\n\nPython, pandas, matplotlib, seaborn, scikit-learn, scipy\n\nView full code on GitHub"
+  },
+  {
     "objectID": "posts/diabetes-analysis/index.html",
     "href": "posts/diabetes-analysis/index.html",
     "title": "Diabetes Prediction Analysis",
@@ -284,6 +347,6 @@
     "href": "index.html",
     "title": "DATS 1001",
     "section": "",
-    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nPCOS Risk Factor Analysis\n\n\n\n\n\n\n\n\nMar 11, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nEmi Rivera\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog for DATS 1001!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPatient No-Show Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Prediction Analysis\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nPCOS Risk Factor Analysis\n\n\n\n\n\n\n\n\nMar 11, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 2\n\n\n\n\n\n\n\n\nMar 1, 2026\n\n\nEmi Rivera\n\n\n\n\n\n\n\n\n\n\n\n\nCoding Assignment 1\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nEmi Rivera\n\n\n\n\n\nNo matching items"
   }
 ]

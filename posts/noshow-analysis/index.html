@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Emi Rivera">
+<meta name="dcterms.date" content="2026-03-17">
 
-<title>DATS 1001 – MyBlog</title>
+<title>Patient No-Show Prediction Analysis – MyBlog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3d9c20eb0336aa831465c704db43c641.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3d9c20eb0336aa831465c704db43c641.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="MyBlog" href="index.xml" data-external="1"></head>
-
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">MyBlog</span>
     </a>
   </div>
@@ -152,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">Emi Rivera</span></a>
   </li>  
   <li class="nav-item compact">
@@ -175,13 +116,19 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">DATS 1001</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Patient No-Show Prediction Analysis</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Machine Learning</div>
+                <div class="quarto-category">Healthcare</div>
+                <div class="quarto-category">Clinical Data</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta">
 
       <div>
       <div class="quarto-title-meta-heading">Author</div>
@@ -190,157 +137,116 @@ window.Quarto = {
             </div>
     </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 17, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<p>Welcome to my blog for DATS 1001!</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>In this project, I analyzed real appointment data from a primary care clinic to identify what drives patient no-shows and built a machine learning model to predict which appointments are at highest risk. This came from a real problem I see working as a Medical Assistant. No-shows waste provider time and are largely preventable with the right outreach.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<ul>
+<li>48,810 de-identified appointment records (2023–2026)</li>
+<li>Source: EHR export from JinCare Wellness Center (raw data not included)</li>
+<li>Overall no-show rate: <strong>19.11%</strong></li>
+<li>Features include insurance type, appointment type, age, sex, confirmation status, and scheduling channel</li>
+</ul>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li>Confirmed patients had a <strong>2.91% no-show rate</strong> vs <strong>29.63%</strong> for patients with no contact — a 10x difference</li>
+<li>Uninsured (cash pay) patients had a <strong>77% no-show rate</strong>, while Medicare patients were the lowest at around 4–5%</li>
+<li>Younger patients (mean age 45.4) no-showed more than patients who showed up (mean age 49.1, p &lt; 0.0001)</li>
+<li>Staff-scheduled appointments had a <strong>6.8% no-show rate</strong> vs <strong>15.3%</strong> for patient portal appointments</li>
+</ul>
+</section>
+<section id="visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noshow_by_confirmation.png" class="img-fluid figure-img"></p>
+<figcaption>Confirmation Effect</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noshow_by_insurance.png" class="img-fluid figure-img"></p>
+<figcaption>Insurance Type</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noshow_by_age.png" class="img-fluid figure-img"></p>
+<figcaption>Age Distribution</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noshow_by_channel.png" class="img-fluid figure-img"></p>
+<figcaption>Scheduling Channel</figcaption>
+</figure>
+</div>
+</section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>All predictors except sex were statistically significant (p &lt; 0.05).</p>
+<p><strong>Key findings:</strong></p>
+<ul>
+<li>Insurance type (p &lt; 0.0001), appointment type (p &lt; 0.0001), confirmation status (p &lt; 0.0001), and age (p &lt; 0.0001) all showed strong associations with no-show behavior</li>
+<li><strong>Sex was the only non-significant predictor (p = 0.35)</strong>, suggesting no-show behavior is similar between male and female patients</li>
+</ul>
+</section>
+<section id="machine-learning-model" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-model">Machine Learning Model</h2>
+<p>Using patient age, appointment type, confirmation status, insurance type, and scheduling channel as features:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="noshow_feature_importance.png" class="img-fluid figure-img"></p>
+<figcaption>Feature Importance</figcaption>
+</figure>
+</div>
+<ul>
+<li>Logistic Regression Accuracy: 60.73%</li>
+<li><strong>Random Forest Accuracy: 82.38%</strong></li>
+<li>Top predictors: patient age, appointment type, confirmation status, insurance type</li>
+</ul>
+</section>
+<section id="clinical-application" class="level2">
+<h2 class="anchored" data-anchor-id="clinical-application">Clinical Application</h2>
+<p>Beyond the analysis, I built a daily risk prediction tool that takes the clinic’s EHR schedule, parses each appointment, and outputs a ranked list with high-risk patients flagged in red. The goal is to give the front desk a simple way to prioritize outreach calls each morning.</p>
+</section>
+<section id="tools-used" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<ul>
+<li>Python, pandas, matplotlib, seaborn, scikit-learn, scipy</li>
+</ul>
+<p><a href="https://github.com/emi030/noshow-prediction">View full code on GitHub</a></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZSUyQ0NsaW5pY2FsJTIwRGF0YQ==" data-listing-date-sort="1773720000000" data-listing-file-modified-sort="1773802814957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="320">
-<div class="thumbnail"><a href="./posts/noshow-analysis/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/noshow-analysis/noshow_by_confirmation.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/noshow-analysis/index.html" class="no-external">Patient No-Show Prediction Analysis</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/noshow-analysis/index.html" class="no-external">
-In this project, I analyzed real appointment data from a primary care clinic to identify what drives patient no-shows and built a machine learning model to predict which…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/noshow-analysis/index.html" class="no-external">
-<div class="listing-date">
-Mar 17, 2026
-</div>
-<div class="listing-author">
-Emi Rivera
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZQ==" data-listing-date-sort="1773720000000" data-listing-file-modified-sort="1773794915370" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="225">
-<div class="thumbnail"><a href="./posts/diabetes-analysis/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/diabetes-analysis/glucose_distribution.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/diabetes-analysis/index.html" class="no-external">Diabetes Prediction Analysis</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/diabetes-analysis/index.html" class="no-external">
-In this project, I analyzed the Pima Indians Diabetes Dataset to explore risk factors associated with diabetes and built a machine learning model to predict diabetes outcomes.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/diabetes-analysis/index.html" class="no-external">
-<div class="listing-date">
-Mar 17, 2026
-</div>
-<div class="listing-author">
-Emi Rivera
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDV29tZW4ncyUyMEhlYWx0aA==" data-listing-date-sort="1773201600000" data-listing-file-modified-sort="1773794207914" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="272">
-<div class="thumbnail"><a href="./posts/pcos-analysis/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/pcos-analysis/symptoms_comparison.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/pcos-analysis/index.html" class="no-external">PCOS Risk Factor Analysis</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/pcos-analysis/index.html" class="no-external">
-In this project, I analyzed a clinical PCOS dataset containing 541 patients to identify key risk factors and built a machine learning model to predict PCOS diagnosis with…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/pcos-analysis/index.html" class="no-external">
-<div class="listing-date">
-Mar 11, 2026
-</div>
-<div class="listing-author">
-Emi Rivera
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UiUyQ0RhdGElMjBXcmFuZ2xpbmclMkNDbGltYXRlJTIwRGF0YQ==" data-listing-date-sort="1772341200000" data-listing-file-modified-sort="1773768514048" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="950">
-<div class="thumbnail"><a href="./posts/assignment 2/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/assignment 2/index_files/figure-html/p6-plot-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/assignment 2/index.html" class="no-external">Coding Assignment 2</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/assignment 2/index.html" class="no-external">
-In this assignment, I analyzed a large NOAA climate dataset containing over 17 million temperature measurements from weather stations around the world. Using R and the…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/assignment 2/index.html" class="no-external">
-<div class="listing-date">
-Mar 1, 2026
-</div>
-<div class="listing-author">
-Emi Rivera
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="UiUyQ1F1YXJ0byUyQ1Bob3RvZ3JhcGh5" data-listing-date-sort="1768885200000" data-listing-file-modified-sort="1773768758783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="156">
-<div class="thumbnail"><a href="./posts/assignment1/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/assignment1/cat.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/assignment1/index.html" class="no-external">Coding Assignment 1</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/assignment1/index.html" class="no-external">
-In this first assignment, I learned the basics of Quarto markdown, including text formatting, lists, images, and embedded R code. I used my passion for photography as the…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/assignment1/index.html" class="no-external">
-<div class="listing-date">
-Jan 20, 2026
-</div>
-<div class="listing-author">
-Emi Rivera
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
