@@ -28,19 +28,21 @@
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <ul>
-<li>48,810 de-identified appointment records (2023–2026)</li>
+<li>52,973 de-identified appointment records (2023–2026)</li>
 <li>Source: EHR export from JinCare Wellness Center (raw data not included)</li>
-<li>Overall no-show rate: <strong>19.11%</strong></li>
-<li>Features include insurance type, appointment type, age, sex, confirmation status, and scheduling channel</li>
+<li>Overall no-show rate: <strong>18.16%</strong></li>
+<li>Features include insurance type, appointment type, age, sex, confirmation status, scheduling channel, chronic disease diagnosis, expected copay, and valid email status</li>
 </ul>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
 <ul>
-<li>Confirmed patients had a <strong>2.91% no-show rate</strong> vs <strong>29.63%</strong> for patients with no contact — a 10x difference</li>
+<li>Confirmed patients had a <strong>2.91% no-show rate</strong> vs <strong>29.63%</strong> for patients with no contact. This is a 10x difference</li>
 <li>Uninsured (cash pay) patients had a <strong>77% no-show rate</strong>, while Medicare patients were the lowest at around 4–5%</li>
 <li>Younger patients (mean age 45.4) no-showed more than patients who showed up (mean age 49.1, p &lt; 0.0001)</li>
 <li>Staff-scheduled appointments had a <strong>6.8% no-show rate</strong> vs <strong>15.3%</strong> for patient portal appointments</li>
+<li>Patients with <strong>no valid email had a 77% no-show rate</strong> vs 8% for patients with a valid email, which suggesting patients without email contact are largely unreachable through the reminder system</li>
+<li>Patients <strong>with chronic conditions (diabetes, hypertension, obesity, etc.) had near-zero no-show rates</strong>, while patients without any chronic diagnosis had a 23% no-show rate. This makes clinical sense: patients managing ongoing conditions tend to stay engaged with their care</li>
 </ul>
 </section>
 <section id="visualizations" class="level2">
@@ -69,30 +71,75 @@
 <figcaption>Scheduling Channel</figcaption>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://emi030.github.io/posts/noshow-analysis/noshow_by_chronic.png" class="img-fluid figure-img"></p>
+<figcaption>Chronic Condition</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://emi030.github.io/posts/noshow-analysis/noshow_by_email.png" class="img-fluid figure-img"></p>
+<figcaption>Valid Email</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://emi030.github.io/posts/noshow-analysis/noshow_by_copay.png" class="img-fluid figure-img"></p>
+<figcaption>Copay</figcaption>
+</figure>
+</div>
 </section>
 <section id="statistical-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
 <p>All predictors except sex were statistically significant (p &lt; 0.05).</p>
 <p><strong>Key findings:</strong></p>
 <ul>
-<li>Insurance type (p &lt; 0.0001), appointment type (p &lt; 0.0001), confirmation status (p &lt; 0.0001), and age (p &lt; 0.0001) all showed strong associations with no-show behavior</li>
+<li>Insurance type, appointment type, confirmation status, age, chronic disease, copay, valid email, and scheduling channel all showed strong associations with no-show behavior (p &lt; 0.0001)</li>
 <li><strong>Sex was the only non-significant predictor (p = 0.35)</strong>, suggesting no-show behavior is similar between male and female patients</li>
 </ul>
 </section>
 <section id="machine-learning-model" class="level2">
 <h2 class="anchored" data-anchor-id="machine-learning-model">Machine Learning Model</h2>
-<p>Using patient age, appointment type, confirmation status, insurance type, and scheduling channel as features:</p>
+<p>Using patient age, appointment type, confirmation status, insurance type, scheduling channel, chronic disease flag, copay bucket, and valid email as features:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://emi030.github.io/posts/noshow-analysis/noshow_feature_importance.png" class="img-fluid figure-img"></p>
 <figcaption>Feature Importance</figcaption>
 </figure>
 </div>
-<ul>
-<li>Logistic Regression Accuracy: 60.73%</li>
-<li><strong>Random Forest Accuracy: 82.38%</strong></li>
-<li>Top predictors: patient age, appointment type, confirmation status, insurance type</li>
-</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Accuracy</th>
+<th>ROC-AUC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logistic Regression</td>
+<td>59.14%</td>
+<td>0.7669</td>
+</tr>
+<tr class="even">
+<td>Random Forest + SMOTE</td>
+<td>85.75%</td>
+<td>0.8263</td>
+</tr>
+<tr class="odd">
+<td>XGBoost + SMOTE</td>
+<td>84.35%</td>
+<td>0.8646</td>
+</tr>
+<tr class="even">
+<td><strong>Random Forest (GridSearch tuned)</strong></td>
+<td><strong>86.06%</strong></td>
+<td><strong>0.8382</strong></td>
+</tr>
+</tbody>
+</table>
+<p>SMOTE was used to address class imbalance (82% showed up vs 18% no-show). GridSearch optimized hyperparameters with 5-fold cross-validation, achieving a CV AUC of 0.9617. The top predictors were patient age, appointment type, and chronic disease status.</p>
 </section>
 <section id="clinical-application" class="level2">
 <h2 class="anchored" data-anchor-id="clinical-application">Clinical Application</h2>
@@ -106,7 +153,7 @@
 <section id="tools-used" class="level2">
 <h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
 <ul>
-<li>Python, pandas, matplotlib, seaborn, scikit-learn, scipy</li>
+<li>Python, pandas, matplotlib, seaborn, scikit-learn, scipy, xgboost, imbalanced-learn</li>
 </ul>
 <p><a href="https://github.com/emi030/noshow-prediction">View full code on GitHub</a></p>
 

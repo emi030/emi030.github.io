@@ -235,35 +235,35 @@
     "href": "posts/noshow-analysis/index.html#dataset",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Dataset",
-    "text": "Dataset\n\n48,810 de-identified appointment records (2023–2026)\nSource: EHR export from JinCare Wellness Center (raw data not included)\nOverall no-show rate: 19.11%\nFeatures include insurance type, appointment type, age, sex, confirmation status, and scheduling channel"
+    "text": "Dataset\n\n52,973 de-identified appointment records (2023–2026)\nSource: EHR export from JinCare Wellness Center (raw data not included)\nOverall no-show rate: 18.16%\nFeatures include insurance type, appointment type, age, sex, confirmation status, scheduling channel, chronic disease diagnosis, expected copay, and valid email status"
   },
   {
     "objectID": "posts/noshow-analysis/index.html#key-findings",
     "href": "posts/noshow-analysis/index.html#key-findings",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Key Findings",
-    "text": "Key Findings\n\nConfirmed patients had a 2.91% no-show rate vs 29.63% for patients with no contact — a 10x difference\nUninsured (cash pay) patients had a 77% no-show rate, while Medicare patients were the lowest at around 4–5%\nYounger patients (mean age 45.4) no-showed more than patients who showed up (mean age 49.1, p &lt; 0.0001)\nStaff-scheduled appointments had a 6.8% no-show rate vs 15.3% for patient portal appointments"
+    "text": "Key Findings\n\nConfirmed patients had a 2.91% no-show rate vs 29.63% for patients with no contact. This is a 10x difference\nUninsured (cash pay) patients had a 77% no-show rate, while Medicare patients were the lowest at around 4–5%\nYounger patients (mean age 45.4) no-showed more than patients who showed up (mean age 49.1, p &lt; 0.0001)\nStaff-scheduled appointments had a 6.8% no-show rate vs 15.3% for patient portal appointments\nPatients with no valid email had a 77% no-show rate vs 8% for patients with a valid email, which suggesting patients without email contact are largely unreachable through the reminder system\nPatients with chronic conditions (diabetes, hypertension, obesity, etc.) had near-zero no-show rates, while patients without any chronic diagnosis had a 23% no-show rate. This makes clinical sense: patients managing ongoing conditions tend to stay engaged with their care"
   },
   {
     "objectID": "posts/noshow-analysis/index.html#visualizations",
     "href": "posts/noshow-analysis/index.html#visualizations",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Visualizations",
-    "text": "Visualizations\n\n\n\nConfirmation Effect\n\n\n\n\n\nInsurance Type\n\n\n\n\n\nAge Distribution\n\n\n\n\n\nScheduling Channel"
+    "text": "Visualizations\n\n\n\nConfirmation Effect\n\n\n\n\n\nInsurance Type\n\n\n\n\n\nAge Distribution\n\n\n\n\n\nScheduling Channel\n\n\n\n\n\nChronic Condition\n\n\n\n\n\nValid Email\n\n\n\n\n\nCopay"
   },
   {
     "objectID": "posts/noshow-analysis/index.html#statistical-analysis",
     "href": "posts/noshow-analysis/index.html#statistical-analysis",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Statistical Analysis",
-    "text": "Statistical Analysis\nAll predictors except sex were statistically significant (p &lt; 0.05).\nKey findings:\n\nInsurance type (p &lt; 0.0001), appointment type (p &lt; 0.0001), confirmation status (p &lt; 0.0001), and age (p &lt; 0.0001) all showed strong associations with no-show behavior\nSex was the only non-significant predictor (p = 0.35), suggesting no-show behavior is similar between male and female patients"
+    "text": "Statistical Analysis\nAll predictors except sex were statistically significant (p &lt; 0.05).\nKey findings:\n\nInsurance type, appointment type, confirmation status, age, chronic disease, copay, valid email, and scheduling channel all showed strong associations with no-show behavior (p &lt; 0.0001)\nSex was the only non-significant predictor (p = 0.35), suggesting no-show behavior is similar between male and female patients"
   },
   {
     "objectID": "posts/noshow-analysis/index.html#machine-learning-model",
     "href": "posts/noshow-analysis/index.html#machine-learning-model",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Machine Learning Model",
-    "text": "Machine Learning Model\nUsing patient age, appointment type, confirmation status, insurance type, and scheduling channel as features:\n\n\n\nFeature Importance\n\n\n\nLogistic Regression Accuracy: 60.73%\nRandom Forest Accuracy: 82.38%\nTop predictors: patient age, appointment type, confirmation status, insurance type"
+    "text": "Machine Learning Model\nUsing patient age, appointment type, confirmation status, insurance type, scheduling channel, chronic disease flag, copay bucket, and valid email as features:\n\n\n\nFeature Importance\n\n\n\n\n\nModel\nAccuracy\nROC-AUC\n\n\n\n\nLogistic Regression\n59.14%\n0.7669\n\n\nRandom Forest + SMOTE\n85.75%\n0.8263\n\n\nXGBoost + SMOTE\n84.35%\n0.8646\n\n\nRandom Forest (GridSearch tuned)\n86.06%\n0.8382\n\n\n\nSMOTE was used to address class imbalance (82% showed up vs 18% no-show). GridSearch optimized hyperparameters with 5-fold cross-validation, achieving a CV AUC of 0.9617. The top predictors were patient age, appointment type, and chronic disease status."
   },
   {
     "objectID": "posts/noshow-analysis/index.html#clinical-application",
@@ -277,7 +277,7 @@
     "href": "posts/noshow-analysis/index.html#tools-used",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Tools Used",
-    "text": "Tools Used\n\nPython, pandas, matplotlib, seaborn, scikit-learn, scipy\n\nView full code on GitHub"
+    "text": "Tools Used\n\nPython, pandas, matplotlib, seaborn, scikit-learn, scipy, xgboost, imbalanced-learn\n\nView full code on GitHub"
   },
   {
     "objectID": "posts/diabetes-analysis/index.html",
