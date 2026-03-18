@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>MyBlog</title>
-<link>https://your-website-url.example.com/</link>
-<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://emi030.github.io/</link>
+<atom:link href="https://emi030.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Tue, 17 Mar 2026 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Diabetes Prediction Analysis</title>
   <dc:creator>Emi Rivera</dc:creator>
-  <link>https://your-website-url.example.com/posts/diabetes-analysis/</link>
+  <link>https://emi030.github.io/posts/diabetes-analysis/</link>
   <description><![CDATA[ 
 
 
@@ -41,19 +41,19 @@
 <h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/glucose_distribution.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/diabetes-analysis/glucose_distribution.png" class="img-fluid figure-img"></p>
 <figcaption>Glucose Distribution</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/bmi_age_analysis.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/diabetes-analysis/bmi_age_analysis.png" class="img-fluid figure-img"></p>
 <figcaption>BMI and Age Analysis</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/correlation_heatmap.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/diabetes-analysis/correlation_heatmap.png" class="img-fluid figure-img"></p>
 <figcaption>Correlation Heatmap</figcaption>
 </figure>
 </div>
@@ -67,7 +67,7 @@
 <p>To validate the findings, I conducted t-tests comparing diabetic and non-diabetic groups.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/pvalue_plot.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/diabetes-analysis/pvalue_plot.png" class="img-fluid figure-img"></p>
 <figcaption>Statistical Significance</figcaption>
 </figure>
 </div>
@@ -84,7 +84,7 @@
 <p>PCA applied to key clinical features reveals partial separation between diabetic and non-diabetic patients.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/diabetes-analysis/pca_plot.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/diabetes-analysis/pca_plot.png" class="img-fluid figure-img"></p>
 <figcaption>PCA of Diabetes Clinical Features</figcaption>
 </figure>
 </div>
@@ -104,14 +104,14 @@
   <category>Python</category>
   <category>Machine Learning</category>
   <category>Healthcare</category>
-  <guid>https://your-website-url.example.com/posts/diabetes-analysis/</guid>
+  <guid>https://emi030.github.io/posts/diabetes-analysis/</guid>
   <pubDate>Tue, 17 Mar 2026 04:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/diabetes-analysis/glucose_distribution.png" medium="image" type="image/png" height="108" width="144"/>
+  <media:content url="https://emi030.github.io/posts/diabetes-analysis/glucose_distribution.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
   <title>PCOS Risk Factor Analysis</title>
   <dc:creator>Emi Rivera</dc:creator>
-  <link>https://your-website-url.example.com/posts/pcos-analysis/</link>
+  <link>https://emi030.github.io/posts/pcos-analysis/</link>
   <description><![CDATA[ 
 
 
@@ -142,13 +142,13 @@
 <h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/pcos-analysis/symptoms_comparison.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/pcos-analysis/symptoms_comparison.png" class="img-fluid figure-img"></p>
 <figcaption>Symptom Comparison</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/pcos-analysis/hormone_analysis_clean.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/pcos-analysis/hormone_analysis_clean.png" class="img-fluid figure-img"></p>
 <figcaption>Hormone Analysis</figcaption>
 </figure>
 </div>
@@ -162,7 +162,7 @@
 <p>To validate the findings, I conducted t-tests comparing PCOS and non-PCOS groups.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/pcos-analysis/pvalue_plot.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/pcos-analysis/pvalue_plot.png" class="img-fluid figure-img"></p>
 <figcaption>Statistical Significance</figcaption>
 </figure>
 </div>
@@ -178,7 +178,7 @@
 <p>To explore the underlying structure of the data, I applied Principal Component Analysis (PCA) to key clinical features including BMI, hormone levels, and follicle counts.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/pcos-analysis/pca_plot.png" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/pcos-analysis/pca_plot.png" class="img-fluid figure-img"></p>
 <figcaption>PCA of PCOS Clinical Features</figcaption>
 </figure>
 </div>
@@ -198,14 +198,14 @@
   <category>Python</category>
   <category>Machine Learning</category>
   <category>Women&#39;s Health</category>
-  <guid>https://your-website-url.example.com/posts/pcos-analysis/</guid>
+  <guid>https://emi030.github.io/posts/pcos-analysis/</guid>
   <pubDate>Wed, 11 Mar 2026 04:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/pcos-analysis/symptoms_comparison.png" medium="image" type="image/png" height="86" width="144"/>
+  <media:content url="https://emi030.github.io/posts/pcos-analysis/symptoms_comparison.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
   <title>Coding Assignment 2</title>
   <dc:creator>Emi Rivera</dc:creator>
-  <link>https://your-website-url.example.com/posts/assignment 2/</link>
+  <link>https://emi030.github.io/posts/assignment 2/</link>
   <description><![CDATA[ 
 
 
@@ -375,7 +375,7 @@ $ Name        &lt;chr&gt; "Afghanistan", "Akrotiri", "Albania", "Algeria", "Amer
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/assignment 2/index_files/figure-html/p6-plot-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="https://emi030.github.io/posts/assignment 2/index_files/figure-html/p6-plot-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -388,13 +388,13 @@ $ Name        &lt;chr&gt; "Afghanistan", "Akrotiri", "Albania", "Algeria", "Amer
   <category>R</category>
   <category>Data Wrangling</category>
   <category>Climate Data</category>
-  <guid>https://your-website-url.example.com/posts/assignment 2/</guid>
+  <guid>https://emi030.github.io/posts/assignment 2/</guid>
   <pubDate>Sun, 01 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Coding Assignment 1</title>
   <dc:creator>Emi Rivera</dc:creator>
-  <link>https://your-website-url.example.com/posts/assignment1/</link>
+  <link>https://emi030.github.io/posts/assignment1/</link>
   <description><![CDATA[ 
 
 
@@ -446,7 +446,7 @@ $ Name        &lt;chr&gt; "Afghanistan", "Akrotiri", "Albania", "Algeria", "Amer
 <h2 class="anchored" data-anchor-id="a-sample-image">A Sample Image</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://your-website-url.example.com/posts/assignment1/cat.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://emi030.github.io/posts/assignment1/cat.jpeg" class="img-fluid figure-img"></p>
 <figcaption>Photo of my cat</figcaption>
 </figure>
 </div>
@@ -467,7 +467,7 @@ $ Name        &lt;chr&gt; "Afghanistan", "Akrotiri", "Albania", "Algeria", "Amer
   <category>R</category>
   <category>Quarto</category>
   <category>Photography</category>
-  <guid>https://your-website-url.example.com/posts/assignment1/</guid>
+  <guid>https://emi030.github.io/posts/assignment1/</guid>
   <pubDate>Tue, 20 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
