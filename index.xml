@@ -129,6 +129,26 @@
 <h2 class="anchored" data-anchor-id="machine-learning-model">Machine Learning Model</h2>
 <p>Using Logistic Regression with BMI, hormone levels, follicle count, and symptoms as features, the model achieved <strong>86.11% accuracy</strong> in predicting PCOS diagnosis.</p>
 </section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>To validate the findings, I conducted t-tests comparing PCOS and non-PCOS groups.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/pcos-analysis/pvalue_plot.png" class="img-fluid figure-img"></p>
+<figcaption>Statistical Significance</figcaption>
+</figure>
+</div>
+<p><strong>Key findings:</strong></p>
+<ul>
+<li>AMH (p = 0.0001), BMI (p = 0.0002), and FSH (p = 0.0105) showed statistically significant differences between groups</li>
+<li>All five symptoms were highly significant (p &lt; 0.0001)</li>
+<li><strong>Interestingly, LH was the only non-significant marker (p = 0.6230)</strong>, suggesting it may not be a reliable standalone diagnostic indicator — and raising questions about whether LH behaves differently across ethnic populations</li>
+</ul>
+</section>
+<section id="limitations-future-directions" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-future-directions">Limitations &amp; Future Directions</h2>
+<p>This dataset does not include ethnicity information. Given that East Asian and Latina women present with PCOS differently than European women, future work should examine whether these findings generalize across ethnic groups — particularly in the context of GWAS-based genetic risk profiling.</p>
+</section>
 <section id="tools-used" class="level2">
 <h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
 <ul>
