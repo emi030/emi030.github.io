@@ -245,6 +245,20 @@
     "text": "Machine Learning Model\nUsing Logistic Regression with an 80/20 train/test split, the model achieved 74.68% accuracy in predicting diabetes outcomes."
   },
   {
+    "objectID": "posts/diabetes-analysis/index.html#statistical-analysis",
+    "href": "posts/diabetes-analysis/index.html#statistical-analysis",
+    "title": "Diabetes Prediction Analysis",
+    "section": "Statistical Analysis",
+    "text": "Statistical Analysis\nTo validate the findings, I conducted t-tests comparing diabetic and non-diabetic groups.\n\n\n\nStatistical Significance\n\n\nKey findings:\n\nGlucose showed the strongest difference (p &lt; 0.0001) by far the most important predictor\nBMI and Age were also highly significant (p &lt; 0.0001)\nInsulin was significant (p = 0.0003)\nBloodPressure was the only non-significant feature (p = 0.0715) This is suggesting it may not be a reliable standalone diagnostic indicator"
+  },
+  {
+    "objectID": "posts/diabetes-analysis/index.html#pca-analysis",
+    "href": "posts/diabetes-analysis/index.html#pca-analysis",
+    "title": "Diabetes Prediction Analysis",
+    "section": "PCA Analysis",
+    "text": "PCA Analysis\nPCA applied to key clinical features reveals partial separation between diabetic and non-diabetic patients.\n\n\n\nPCA of Diabetes Clinical Features\n\n\nPC1 and PC2 together explain 49.5% of the variance. Compared to the PCOS dataset, the separation between groups is less distinct, reflecting the more complex and multifactorial nature of diabetes."
+  },
+  {
     "objectID": "posts/diabetes-analysis/index.html#tools-used",
     "href": "posts/diabetes-analysis/index.html#tools-used",
     "title": "Diabetes Prediction Analysis",

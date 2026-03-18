@@ -199,6 +199,34 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="machine-learning-model">Machine Learning Model</h2>
 <p>Using Logistic Regression with an 80/20 train/test split, the model achieved <strong>74.68% accuracy</strong> in predicting diabetes outcomes.</p>
 </section>
+<section id="statistical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h2>
+<p>To validate the findings, I conducted t-tests comparing diabetic and non-diabetic groups.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pvalue_plot.png" class="img-fluid figure-img"></p>
+<figcaption>Statistical Significance</figcaption>
+</figure>
+</div>
+<p><strong>Key findings:</strong></p>
+<ul>
+<li>Glucose showed the strongest difference (p &lt; 0.0001) by far the most important predictor</li>
+<li>BMI and Age were also highly significant (p &lt; 0.0001)</li>
+<li>Insulin was significant (p = 0.0003)</li>
+<li><strong>BloodPressure was the only non-significant feature (p = 0.0715)</strong> This is suggesting it may not be a reliable standalone diagnostic indicator</li>
+</ul>
+</section>
+<section id="pca-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="pca-analysis">PCA Analysis</h2>
+<p>PCA applied to key clinical features reveals partial separation between diabetic and non-diabetic patients.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pca_plot.png" class="img-fluid figure-img"></p>
+<figcaption>PCA of Diabetes Clinical Features</figcaption>
+</figure>
+</div>
+<p>PC1 and PC2 together explain <strong>49.5% of the variance</strong>. Compared to the PCOS dataset, the separation between groups is less distinct, reflecting the more complex and multifactorial nature of diabetes.</p>
+</section>
 <section id="tools-used" class="level2">
 <h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
 <ul>
