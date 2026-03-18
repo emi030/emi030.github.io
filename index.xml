@@ -96,7 +96,12 @@
 </section>
 <section id="clinical-application" class="level2">
 <h2 class="anchored" data-anchor-id="clinical-application">Clinical Application</h2>
-<p>Beyond the analysis, I built a daily risk prediction tool that takes the clinic’s EHR schedule, parses each appointment, and outputs a ranked list with high-risk patients flagged in red. The goal is to give the front desk a simple way to prioritize outreach calls each morning.</p>
+<p>Beyond the analysis, I built two tools for daily clinical use:</p>
+<ul>
+<li><code>predict_noshow.py</code> — a command-line script that takes the clinic’s EHR schedule, parses each appointment, and outputs a color-coded Excel file with high-risk patients ranked at the top</li>
+<li><code>noshow_risk_tool.html</code> — a browser-based version of the same tool, no coding required. Front desk staff can open it, paste the daily schedule, and instantly see which patients to call first</li>
+</ul>
+<p>The goal is to give the front desk a simple way to prioritize outreach calls each morning without needing any technical knowledge.</p>
 </section>
 <section id="tools-used" class="level2">
 <h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>

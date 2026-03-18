@@ -270,7 +270,7 @@
     "href": "posts/noshow-analysis/index.html#clinical-application",
     "title": "Patient No-Show Prediction Analysis",
     "section": "Clinical Application",
-    "text": "Clinical Application\nBeyond the analysis, I built a daily risk prediction tool that takes the clinic’s EHR schedule, parses each appointment, and outputs a ranked list with high-risk patients flagged in red. The goal is to give the front desk a simple way to prioritize outreach calls each morning."
+    "text": "Clinical Application\nBeyond the analysis, I built two tools for daily clinical use:\n\npredict_noshow.py — a command-line script that takes the clinic’s EHR schedule, parses each appointment, and outputs a color-coded Excel file with high-risk patients ranked at the top\nnoshow_risk_tool.html — a browser-based version of the same tool, no coding required. Front desk staff can open it, paste the daily schedule, and instantly see which patients to call first\n\nThe goal is to give the front desk a simple way to prioritize outreach calls each morning without needing any technical knowledge."
   },
   {
     "objectID": "posts/noshow-analysis/index.html#tools-used",
